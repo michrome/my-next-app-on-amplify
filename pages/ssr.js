@@ -18,6 +18,8 @@ export async function getServerSideProps() {
     dateStyle: "long",
     timeStyle: "long",
   }).format(renderDate);
-
+  console.log(
+    `SSR ran on ${formattedDate}. This will be logged in CloudWatch.`
+  );
   return { props: { formattedDate } };
 }
